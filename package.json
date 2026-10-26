@@ -1,0 +1,8 @@
+{
+  "name": "easy-stay-week9-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/selftest.mjs"
+  }
+}

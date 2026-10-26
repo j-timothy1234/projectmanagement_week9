@@ -1,0 +1,36 @@
+/* Print: compact A4 landscape summary of the Dashboard view only. */
+@page { size: A4 landscape; margin: 7mm; }
+
+html, body { background: #fff; font-size: 8.5pt; }
+.app { display: block; }
+.sidebar, .toolbar, .skip-link, .toast, #view-analysis, .nav { display: none !important; }
+.content { padding: 0; gap: 4pt; }
+
+h1 { font-size: 13pt; }
+h3 { font-size: 9pt; margin-bottom: 2pt; }
+.topbar { gap: 4pt; }
+.topbar__title p { margin: 0; }
+.banner { padding: 2pt 6pt; border-width: 1.5pt; }
+
+.panel, .kpi { box-shadow: none; padding: 4pt 6pt; break-inside: avoid; }
+.kpi-grid, .grid--3 { gap: 4pt; }
+.kpi-grid { grid-template-columns: repeat(6, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+#view-dashboard { gap: 4pt; }
+.kpi__value { font-size: 12pt; }
+.kpi__note, .chart-note, .bar-row__value { font-size: 6.5pt; }
+.bar-row { margin-bottom: 2pt; }
+.bar-track { height: 6pt; }
+.gantt { font-size: 6.5pt; }
+.gantt__cell { min-height: 11pt; }
+.gantt__bar { margin: 2pt 1pt; }
+
+.table { font-size: 6.5pt; }
+.table th, .table td { padding: 1pt 3pt; }
+.table input, .table select {
+  border: 0; background: transparent; padding: 0; min-width: 0; appearance: none; font-size: 6.5pt;
+}
+.table input[type='date']::-webkit-calendar-picker-indicator { display: none; }
+
+/* Keep colours when printing */
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
